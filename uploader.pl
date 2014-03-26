@@ -11,7 +11,7 @@ my $pos          = $ARGV[2];
 my $sleepvalue   = $ARGV[3] || 0.02;
 
 unless ($filename && $serialdevice && $pos) {
-   print $0.": <binaryfile> <serialdevice>\n";
+   print $0.": <binaryfile> <serialdevice> <memorypostion>\n";
    print "example: ".$0." ppcboot.bin /dev/ttyUSB0 0x40000\n"; 
    exit(1);
 }
