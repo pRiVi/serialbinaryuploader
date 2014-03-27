@@ -24,6 +24,7 @@ my $i = 0;
 my $out = 0;
 
 print OUT "m ".$pos."\n";
+sleep(1);
 while (my $in = sysread(A, my $buf, 1) == 1) {
    print OUT unpack("H2", $buf).($i ? "\n" : "");
    print $out++." of ".$stat->[7]." Bytes (".(int(($out/$stat->[7])*100)/100)."%)\r";
